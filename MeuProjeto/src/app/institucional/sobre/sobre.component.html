@@ -1,0 +1,67 @@
+<!-- referência: https://bootsnipp.com/snippets/O5MaO -->
+
+<div class="wrapperMain">
+    <section id="services" class="bounce-inInverse">
+            <div class="containerContent">
+            <div class="set_size_section1">
+                <h2 class="services_h2 center">SERVICES</h2>
+                <p class="services_p center">hello services, hello services, hello services</p>
+                <div class="article_center2">
+                    <article class="section1_article">
+                        <img alt="Basket" src="http://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" width="78" height="77">
+                        <h3>E-Commerce</h3>
+                        <p>Metus Vestibulum cursus elit pretium auctor cursus lorem Vestibulum eros sagittis. Netus pede Vestibulum Quisque Nam pretium Donec ut vitae quis parturient.</p>
+                        </article>
+                    <article class="section1_article">
+                        <img alt="Laptop" src="http://icons.iconarchive.com/icons/jozef89/services-flat/512/responsive-web-icon.png" width="78" height="77">
+                        <h3>Responsive Web</h3>
+                        <p>Condimentum platea cursus porta tellus eros consectetuer metus Sed aliquet tempus. Laoreet non ac porta urna Vestibulum congue id eu elit dignissim. Sollicitudin vitae ipsum massa enim lacus</p>
+                    </article>
+                    <article class="section1_article">
+                        <img alt="Locked" src="https://cdn0.iconfinder.com/data/icons/web-development-2/512/security_lock_password_protection_secure_locking_system_safe_privacy_private_safety_encryption_flat_design_icon-512.png" width="78" height="77">
+                        <h3>Web Security</h3>
+                        <p>Buspendisse in lorem ipsum ut magna pharera aliquet non sodales lorem ipsum belit. Donec sed odio rera magna pharera aliquet. Nulla uitae elit libero, a pharetra augue nulla ligula massa pharera aliquet</p>
+                    </article>
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        
+        /* BLUR EFFECT */
+    
+        var $container = $('.article_center2'),
+            $articles = $container.children('article'),
+            timeout;
+    
+        $articles.on('mouseenter', function(event) {
+            var $article = $(this);
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                if ($article.hasClass('active')) return false;
+                $articles.not($article).removeClass('active').addClass('blur');
+                $article.removeClass('blur').addClass('active');
+            }, 75);
+        });
+        $('.article_center2', '#services ').on('mouseleave', function(event) {
+            clearTimeout(timeout);
+            $articles.removeClass('active blur');
+        });
+    
+    
+        $articles.bind('click', function(){
+            var title = $(this).find('h3').text();
+            alert("Nothing interesting,\nonly the actual title of the article = " + title);
+        });
+    
+          /* AUTHOR LINK */
+         $('.about-me-img').hover(function(){
+                $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
+            }, function(){
+                $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
+            });
+    
+    
+    
+    </script>
