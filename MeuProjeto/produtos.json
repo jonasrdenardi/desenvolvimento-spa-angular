@@ -2,7 +2,7 @@
     "produtos":[
         {
             "id": 1,
-            "nome": "Mouse Microsoft",
+            "nome": "mouse Microsoft",
             "valor": 15.90,
             "promocao": false,
             "valorPromo": 0,
@@ -14,7 +14,7 @@
             "valor": 30.00,
             "promocao": false,
             "valorPromo": 0,
-            "imagem": "telcado.jpg"
+            "imagem": "teclado.jpg"
         },
         {
             "id": 3,
@@ -54,7 +54,7 @@
             "valor": 90.00,
             "promocao": false,
             "valorPromo": 0,
-            "imagem": "webcam.jpg"
+            "imagem": "smartphone.jpg"
         },
         {
             "id": 8,
